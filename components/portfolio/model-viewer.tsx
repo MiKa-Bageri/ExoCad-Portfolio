@@ -19,14 +19,16 @@ export default function ModelViewer({ src, title }: ModelViewerProps) {
       {isLoading && (
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-2 bg-background/80 backdrop-blur-sm">
           <div className="h-8 w-8 animate-spin rounded-full border-2 border-primary border-t-transparent" />
-          <span className="text-xs text-muted-foreground">Loading 3D Scene...</span>
+          <span className="text-xs text-muted-foreground">
+            Loading 3D Scene...
+          </span>
         </div>
       )}
 
       {/* HTML Viewer Frame */}
       <iframe
         key={src} // کلید برای رفرش صحیح هنگام تعویض کیس
-        src={src}
+        src={`https://cdn$.jsdelivr.net/gh/MiKa-Bageri/ExoCad-Portfolio@main/public/Cases/${src}`}
         title={title}
         className="h-full w-full border-0"
         loading="lazy"

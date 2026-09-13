@@ -35,7 +35,7 @@ export const portfolioCases: PortfolioCase[] = [
     beforeColor: "from-slate-400 to-slate-600",
     afterColor: "from-teal-300 to-emerald-400",
     tags: ["Full Arch", "Zirconia", "CAD/CAM"],
-    htmlUrl: "/Cases/zahra.delir/zahra.delir.html", // Added HTML URL for 3D viewer
+    htmlUrl: "zahra.delir/zahra.delir.html", // Added HTML URL for 3D viewer
   },
   {
     id: "cb-002",
@@ -47,7 +47,7 @@ export const portfolioCases: PortfolioCase[] = [
     beforeColor: "from-stone-400 to-stone-600",
     afterColor: "from-sky-200 to-teal-300",
     tags: ["Anterior", "E-max", "Aesthetic"],
-    htmlUrl: "/Cases/fatemeh.kateb.imp/fatemeh.kateb.imp.html", // Added HTML URL for 3D viewer
+    htmlUrl: "fatemeh.kateb.imp/fatemeh.kateb.imp.html", // Added HTML URL for 3D viewer
   },
   {
     id: "ib-001",
@@ -59,7 +59,7 @@ export const portfolioCases: PortfolioCase[] = [
     beforeColor: "from-zinc-400 to-zinc-600",
     afterColor: "from-cyan-300 to-blue-400",
     tags: ["All-on-4", "Bar", "Implant"],
-    htmlUrl: "/Cases/mehdi.sotoudeh/mehdi.sotoudeh.html", // Added HTML URL for 3D viewer
+    htmlUrl: "mehdi.sotoudeh/mehdi.sotoudeh.html", // Added HTML URL for 3D viewer
   },
   {
     id: "ib-002",
