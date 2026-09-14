@@ -10,8 +10,16 @@ interface ModelViewerProps {
   title: string;
 }
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export default function ModelViewer({ src, title }: ModelViewerProps) {
   const [isLoading, setIsLoading] = useState(true);
+
+  // اگه src از قبل مسیر کامل بود (با / شروع می‌شد)، دست نمی‌زنیم
+  // در غیر این صورت، فرض می‌کنیم زیرپوشه‌ی Cases هست
+  const resolvedSrc = src.startsWith("/")
+    ? `${basePath}${src}`
+    : `${basePath}/Cases/${src}`;
 
   return (
     <div className="relative aspect-square sm:aspect-[4/3] w-full overflow-hidden rounded-lg border bg-zinc-950">
@@ -28,7 +36,7 @@ export default function ModelViewer({ src, title }: ModelViewerProps) {
       {/* HTML Viewer Frame */}
       <iframe
         key={src} // کلید برای رفرش صحیح هنگام تعویض کیس
-        src={`/ExoCad-Portfolio/Cases/${src}`}
+        src={resolvedSrc}
         title={title}
         className="h-full w-full border-0"
         loading="lazy"
@@ -42,7 +50,7 @@ export default function ModelViewer({ src, title }: ModelViewerProps) {
         size="icon"
         variant="secondary"
         className="absolute bottom-3 right-3 h-8 w-8 rounded-full bg-background/80 shadow-md backdrop-blur hover:bg-background"
-        onClick={() => window.open(src, "_blank")}
+        onClick={() => window.open(resolvedSrc, "_blank")}
         title="Open in Fullscreen"
       >
         <Maximize2 className="h-4 w-4" />
