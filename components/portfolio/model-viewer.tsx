@@ -28,7 +28,7 @@ export default function ModelViewer({ src, title }: ModelViewerProps) {
       {/* HTML Viewer Frame */}
       <iframe
         key={src} // کلید برای رفرش صحیح هنگام تعویض کیس
-        src={`https://cdn$.jsdelivr.net/gh/MiKa-Bageri/ExoCad-Portfolio@main/public/Cases/${src}`}
+        src={`/ExoCad-Portfolio/Cases/${src}`}
         title={title}
         className="h-full w-full border-0"
         loading="lazy"
